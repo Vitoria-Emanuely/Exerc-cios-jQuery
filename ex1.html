@@ -13,6 +13,7 @@
         .importante{
             font-weight: bold;
         }
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
@@ -78,7 +79,70 @@
             });
 
             $("#bt15").click(function () {
-                $("#conteudo-principal").prepend("Começos e fins são arbitrários.", " ");
+                $("#conteudo-principal").empty();
+            });
+
+            $("#bt16").click(function () {
+                $(".texto").empty();
+            });
+
+            $("#bt17").click(function () {
+                $(".texto, .outro").empty();
+            });
+
+            $("#bt18").click(function () {
+                $("#paragrafo1").addClass("azul");
+            });
+
+            $("#bt19").click(function () {
+                $("#paragrafo2").addClass("vermelho importante");
+            });
+
+            $("#bt20").click(function () {
+                $("#paragrafo1").removeClass("azul");
+            });
+
+            $("#bt21").click(function () {
+                $("#paragrafo2").toggleClass("importante");
+            });
+
+            $("#bt22").click(function () {
+                $(".outro").css("background-color", "aquamarine");
+            });
+
+            $("#bt23").click(function () {
+                $("h1").css("border", "dotted");
+            });
+
+            $("#bt24").click(function () {
+                var color = $("#paragrafo1").css("color");
+                alert(color);
+            });
+
+            $("#bt25").click(function () {
+                $("#paragrafo2").css({"background-color": "lightcoral", "color": "yellow", "font-size": "25px", "padding": "15px"});
+            });
+
+            $("#bt26").click(function () {
+                var largura = $("input").css("width");
+                alert(largura);
+            });
+
+            $("#bt27").click(function () {
+                var altura = $("#paragrafo1").css("height");
+                alert(altura);
+            });
+
+            $("#bt28").click(function () {
+                $(".outro").parent().css("border", "5px solid");
+            });
+
+            $("#bt29").click(function () {
+                $("span").parents().css("border", "5px solid");
+            });
+
+            $("#bt30").click(function () {
+                $("h1").children().css("border", "5px solid");
             });
 
         });
